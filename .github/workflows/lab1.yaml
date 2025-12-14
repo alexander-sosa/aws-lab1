@@ -27,12 +27,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           pip install boto3
-      - name: Deploy CloudFormation S3 Bucket
-        run: |
-          aws cloudformation deploy \
-            --template-file cf.yaml \
-            --stack-name craws-lab1-s3-stack \
-            --no-fail-on-empty-changeset
+      # - name: Deploy CloudFormation S3 Bucket
+      #   run: |
+      #     aws cloudformation deploy \
+      #       --template-file cf.yaml \
+      #       --stack-name craws-lab1-s3-stack \
+      #       --no-fail-on-empty-changeset
       - name: Run tests
         run: pytest
       
